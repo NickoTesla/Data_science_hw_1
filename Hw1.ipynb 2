@@ -1,0 +1,595 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "0109ef99",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Одновимірний масив (вектор) з першими 10-ма натуральними числами:\n",
+      "[ 1  2  3  4  5  6  7  8  9 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np  # Імпортуємо бібліотеку NumPy для роботи з масивами\n",
+    "\n",
+    "# 1. Одновимірний масив (вектор) з першими 10-ма натуральними числами\n",
+    "vector1 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])\n",
+    "print(\"Одновимірний масив (вектор) з першими 10-ма натуральними числами:\")\n",
+    "print(vector1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "4b749e31",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Двовимірний масив (матриця) розміром 3x3, заповнений нулями:\n",
+      "[[0. 0. 0.]\n",
+      " [0. 0. 0.]\n",
+      " [0. 0. 0.]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 2. Двовимірний масив (матриця) розміром 3x3, заповнений нулями\n",
+    "matrix1 = np.zeros((3, 3))\n",
+    "print(\"\\nДвовимірний масив (матриця) розміром 3x3, заповнений нулями:\")\n",
+    "print(matrix1)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "41f5c016",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Масив розміром 5x5 з випадковими цілими числами від 1 до 10:\n",
+      "[[ 1  4 10  6  8]\n",
+      " [ 6  3  2  1 10]\n",
+      " [ 1  9  8 10  3]\n",
+      " [ 2  3  2  9  9]\n",
+      " [ 7  2  4  9  1]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 3. Масив розміром 5x5, заповнений випадковими цілими числами від 1 до 10\n",
+    "matrix2 = np.random.randint(1, 11, (5, 5))\n",
+    "print(\"\\nМасив розміром 5x5 з випадковими цілими числами від 1 до 10:\")\n",
+    "print(matrix2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "3151d0dc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Масив розміром 4x4 з випадковими дійсними числами від 0 до 1:\n",
+      "[[0.97322657 0.09169725 0.23903884 0.57735295]\n",
+      " [0.26020204 0.59623393 0.95750391 0.58345554]\n",
+      " [0.48813996 0.39535765 0.20191958 0.41011397]\n",
+      " [0.89145111 0.23694475 0.61285526 0.81297962]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 4. Масив розміром 4x4, заповнений випадковими дійсними числами від 0 до 1\n",
+    "matrix3 = np.random.rand(4, 4)\n",
+    "print(\"\\nМасив розміром 4x4 з випадковими дійсними числами від 0 до 1:\")\n",
+    "print(matrix3)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "6bf33647",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Перший вектор: [10  5  7  2  9]\n",
+      "Другий вектор: [ 2  5 10  1  3]\n",
+      "Сума векторів: [12 10 17  3 12]\n",
+      "Різниця векторів: [ 8  0 -3  1  6]\n",
+      "Добуток векторів: [20 25 70  2 27]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 5. Два одновимірних масиви розміром 5 з випадковими цілими числами та виконання операцій\n",
+    "array1 = np.random.randint(1, 11, 5)\n",
+    "array2 = np.random.randint(1, 11, 5)\n",
+    "sum_result = array1 + array2\n",
+    "diff_result = array1 - array2\n",
+    "mult_result = array1 * array2\n",
+    "print(\"\\nПерший вектор:\", array1)\n",
+    "print(\"Другий вектор:\", array2)\n",
+    "print(\"Сума векторів:\", sum_result)\n",
+    "print(\"Різниця векторів:\", diff_result)\n",
+    "print(\"Добуток векторів:\", mult_result)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "b18cea7b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Перший вектор: [ 9 10  3  9  1  9  7]\n",
+      "Другий вектор: [10  2  4  6  3  6  6]\n",
+      "Скалярний добуток векторів: 275\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 6. Два вектори розміром 7 та знаходження їх скалярного добутку\n",
+    "vector3 = np.random.randint(1, 11, 7)\n",
+    "vector4 = np.random.randint(1, 11, 7)\n",
+    "scalar_product = np.dot(vector3, vector4)\n",
+    "print(\"\\nПерший вектор:\", vector3)\n",
+    "print(\"Другий вектор:\", vector4)\n",
+    "print(\"Скалярний добуток векторів:\", scalar_product)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "4b63c962",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Перша матриця 2x2:\n",
+      "[[9 1]\n",
+      " [2 9]]\n",
+      "Друга матриця 2x3:\n",
+      "[[1 3 1]\n",
+      " [2 4 3]]\n",
+      "Результат множення матриць:\n",
+      "[[11 31 12]\n",
+      " [20 42 29]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 7. Дві матриці розміром 2x2 та 2x3 та їхнє множення\n",
+    "matrix4 = np.random.randint(1, 11, (2, 2))\n",
+    "matrix5 = np.random.randint(1, 11, (2, 3))\n",
+    "product_matrix = np.dot(matrix4, matrix5)\n",
+    "print(\"\\nПерша матриця 2x2:\")\n",
+    "print(matrix4)\n",
+    "print(\"Друга матриця 2x3:\")\n",
+    "print(matrix5)\n",
+    "print(\"Результат множення матриць:\")\n",
+    "print(product_matrix)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "7d7af755",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Матриця 3x3:\n",
+      "[[5 8 8]\n",
+      " [6 3 1]\n",
+      " [4 8 7]]\n",
+      "Обернена матриця:\n",
+      "[[ 0.26530612  0.16326531 -0.32653061]\n",
+      " [-0.7755102   0.06122449  0.87755102]\n",
+      " [ 0.73469388 -0.16326531 -0.67346939]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 8. Матриця 3x3 та знаходження її оберненої матриці\n",
+    "matrix6 = np.random.randint(1, 11, (3, 3))\n",
+    "inverse_matrix = np.linalg.inv(matrix6)\n",
+    "print(\"\\nМатриця 3x3:\")\n",
+    "print(matrix6)\n",
+    "print(\"Обернена матриця:\")\n",
+    "print(inverse_matrix)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "4ce9bfa3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Матриця 4x4:\n",
+      "[[0.17788141 0.14264699 0.19431302 0.95238974]\n",
+      " [0.21496295 0.29530408 0.50556923 0.9674698 ]\n",
+      " [0.54310265 0.52502337 0.30485872 0.30125766]\n",
+      " [0.08945462 0.15212573 0.19726786 0.71710926]]\n",
+      "Транспонована матриця:\n",
+      "[[0.17788141 0.21496295 0.54310265 0.08945462]\n",
+      " [0.14264699 0.29530408 0.52502337 0.15212573]\n",
+      " [0.19431302 0.50556923 0.30485872 0.19726786]\n",
+      " [0.95238974 0.9674698  0.30125766 0.71710926]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 9. Матриця 4x4 та її транспонування\n",
+    "matrix7 = np.random.rand(4, 4)\n",
+    "transposed_matrix = np.transpose(matrix7)\n",
+    "print(\"\\nМатриця 4x4:\")\n",
+    "print(matrix7)\n",
+    "print(\"Транспонована матриця:\")\n",
+    "print(transposed_matrix)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "518d4985",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Матриця 3x4:\n",
+      "[[ 4  6 10  8]\n",
+      " [ 1  8  6  8]\n",
+      " [ 2 10  7  2]]\n",
+      "Вектор розміром 4:\n",
+      "[4 5 3 5]\n",
+      "Результат множення матриці на вектор:\n",
+      "[116 102  89]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 10. Матриця 3x4 та вектор 4 та їхнє множення\n",
+    "matrix8 = np.random.randint(1, 11, (3, 4))\n",
+    "vector5 = np.random.randint(1, 11, 4)\n",
+    "result_vector = np.dot(matrix8, vector5)\n",
+    "print(\"\\nМатриця 3x4:\")\n",
+    "print(matrix8)\n",
+    "print(\"Вектор розміром 4:\")\n",
+    "print(vector5)\n",
+    "print(\"Результат множення матриці на вектор:\")\n",
+    "print(result_vector)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "66db4dc3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Матриця 2x3:\n",
+      "[[0.02618881 0.67968491 0.08394623]\n",
+      " [0.16019948 0.72144285 0.81939459]]\n",
+      "Вектор розміром 3:\n",
+      "[0.4472136  0.72036152 0.38114756]\n",
+      "Результат множення матриці на вектор:\n",
+      "[0.53332675 0.9036533 ]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 11. Матриця 2x3 та вектор 3 та їхнє множення\n",
+    "matrix9 = np.random.rand(2, 3)\n",
+    "vector6 = np.random.rand(3)\n",
+    "result_vector2 = np.dot(matrix9, vector6)\n",
+    "print(\"\\nМатриця 2x3:\")\n",
+    "print(matrix9)\n",
+    "print(\"Вектор розміром 3:\")\n",
+    "print(vector6)\n",
+    "print(\"Результат множення матриці на вектор:\")\n",
+    "print(result_vector2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "42213fa3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Перша матриця 2x2:\n",
+      "[[1 8]\n",
+      " [1 8]]\n",
+      "Друга матриця 2x2:\n",
+      "[[2 9]\n",
+      " [6 9]]\n",
+      "Результат поелементного множення матриць:\n",
+      "[[ 2 72]\n",
+      " [ 6 72]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 12. Дві матриці 2x2 та поелементне множення\n",
+    "matrix10 = np.random.randint(1, 11, (2, 2))\n",
+    "matrix11 = np.random.randint(1, 11, (2, 2))\n",
+    "elementwise_product = np.multiply(matrix10, matrix11)\n",
+    "print(\"\\nПерша матриця 2x2:\")\n",
+    "print(matrix10)\n",
+    "print(\"Друга матриця 2x2:\")\n",
+    "print(matrix11)\n",
+    "print(\"Результат поелементного множення матриць:\")\n",
+    "print(elementwise_product)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "9e0385ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Перша матриця 2x2:\n",
+      "[[9 8]\n",
+      " [7 7]]\n",
+      "Друга матриця 2x2:\n",
+      "[[5 9]\n",
+      " [3 2]]\n",
+      "Результат множення матриць:\n",
+      "[[69 97]\n",
+      " [56 77]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 13. Дві матриці 2x2 та їхнє множення\n",
+    "matrix12 = np.random.randint(1, 11, (2, 2))\n",
+    "matrix13 = np.random.randint(1, 11, (2, 2))\n",
+    "product_matrix2 = np.dot(matrix12, matrix13)\n",
+    "print(\"\\nПерша матриця 2x2:\")\n",
+    "print(matrix12)\n",
+    "print(\"Друга матриця 2x2:\")\n",
+    "print(matrix13)\n",
+    "print(\"Результат множення матриць:\")\n",
+    "print(product_matrix2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "881a8270",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Матриця 5x5:\n",
+      "[[64 92 95 14 97]\n",
+      " [46 81 49  5 96]\n",
+      " [65 40 78 17 80]\n",
+      " [89 49 80 89 35]\n",
+      " [10 73 82 77 68]]\n",
+      "Сума елементів матриці: 1571\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 14. Матриця 5x5 та знаходження суми її елементів\n",
+    "matrix14 = np.random.randint(1, 101, (5, 5))\n",
+    "sum_of_elements = np.sum(matrix14)\n",
+    "print(\"\\nМатриця 5x5:\")\n",
+    "print(matrix14)\n",
+    "print(\"Сума елементів матриці:\", sum_of_elements)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "03fd6d64",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Перша матриця 4x4:\n",
+      "[[ 6  8  9  1]\n",
+      " [ 6  5  8 10]\n",
+      " [ 3  6  3  8]\n",
+      " [ 4  2  1  9]]\n",
+      "Друга матриця 4x4:\n",
+      "[[10  2  5  4]\n",
+      " [ 9  2  8  1]\n",
+      " [ 1  5  6  6]\n",
+      " [10  1  9  8]]\n",
+      "Різниця матриць:\n",
+      "[[-4  6  4 -3]\n",
+      " [-3  3  0  9]\n",
+      " [ 2  1 -3  2]\n",
+      " [-6  1 -8  1]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 15. Дві матриці 4x4 та їхня різниця\n",
+    "matrix15 = np.random.randint(1, 11, (4, 4))\n",
+    "matrix16 = np.random.randint(1, 11, (4, 4))\n",
+    "difference_matrix = matrix15 - matrix16\n",
+    "print(\"\\nПерша матриця 4x4:\")\n",
+    "print(matrix15)\n",
+    "print(\"Друга матриця 4x4:\")\n",
+    "print(matrix16)\n",
+    "print(\"Різниця матриць:\")\n",
+    "print(difference_matrix)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "9ff1caa8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Матриця 3x3:\n",
+      "[[0.25990662 0.1111393  0.97751369]\n",
+      " [0.81106665 0.19828591 0.99164693]\n",
+      " [0.09522085 0.13312926 0.48191819]]\n",
+      "Вектор-стовпчик із сумами рядків:\n",
+      "[[1.34855961]\n",
+      " [2.00099948]\n",
+      " [0.71026829]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 16. Матриця 3x3 та знаходження вектора-стовпчика зі сумами рядків\n",
+    "matrix17 = np.random.rand(3, 3)\n",
+    "row_sums = np.sum(matrix17, axis=1)\n",
+    "column_vector = row_sums[:, np.newaxis]\n",
+    "print(\"\\nМатриця 3x3:\")\n",
+    "print(matrix17)\n",
+    "print(\"Вектор-стовпчик із сумами рядків:\")\n",
+    "print(column_vector)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "64b65b80",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Матриця 3x4:\n",
+      "[[ 8  1  6  1]\n",
+      " [10  7  6  4]\n",
+      " [ 9 10  1  6]]\n",
+      "Матриця квадратів:\n",
+      "[[ 64   1  36   1]\n",
+      " [100  49  36  16]\n",
+      " [ 81 100   1  36]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 17. Матриця 3x4 та створення матриці квадратів чисел\n",
+    "matrix18 = np.random.randint(1, 11, (3, 4))\n",
+    "squared_matrix = np.square(matrix18)\n",
+    "print(\"\\nМатриця 3x4:\")\n",
+    "print(matrix18)\n",
+    "print(\"Матриця квадратів:\")\n",
+    "print(squared_matrix)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "9e32ca86",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Вхідний вектор:\n",
+      "[27 38 45  1]\n",
+      "Вектор квадратних коренів:\n",
+      "[5.19615242 6.164414   6.70820393 1.        ]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 18. Вектор розміром 4 та знаходження вектора квадратних коренів\n",
+    "vector7 = np.random.randint(1, 51, 4)\n",
+    "sqrt_vector = np.sqrt(vector7)\n",
+    "print(\"\\nВхідний вектор:\")\n",
+    "print(vector7)\n",
+    "print(\"Вектор квадратних коренів:\")\n",
+    "print(sqrt_vector)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
